@@ -253,7 +253,7 @@ public extension AppKit {
         
         Store.shared.connecting = true
         
-        AppKit.viewModel.router.setRoute(Store.shared.account != nil ? Router.AccountSubpage.profile : Router.ConnectingSubpage.connectWallet)
+        AppKit.viewModel.router.setRoute(Router.ConnectingSubpage.connectWallet)
         
         let modal = Web3ModalSheetController(router: AppKit.viewModel.router)
         vc.present(modal, animated: true)
